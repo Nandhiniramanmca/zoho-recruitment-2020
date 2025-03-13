@@ -1,0 +1,63 @@
+1)Connect to PostgreSQL:
+psql -U postgres
+2)Create database:
+CREATE DATABASE AISDATABASE
+3)Connect to your database:
+\c your_database_name;
+4)Verify connection: If successful, you'll see:
+You are now connected to database "your_database_name" as user "postgres".
+5)create a table:
+CREATE TABLE Employee (
+    emp_id INT PRIMARY KEY,
+    emp_name VARCHAR(30),
+    emp_address VARCHAR(40),
+    salary REAL
+);
+6)insert a value in the table:
+INSERT INTO Employee (emp_id, emp_name, emp_address, salary)
+VALUES (1, 'John Doe', 'New York', 50000.75);
+7)Inserting Multiple Rows:
+INSERT INTO Employee (emp_id, emp_name, emp_address, salary)
+VALUES 
+    (2, 'Alice Smith', 'Los Angeles', 60000.50),
+    (3, 'Bob Johnson', 'Chicago', 55000.25);
+8)Retrieve Data (SELECT Queries):
+SELECT * FROM employees;
+9)Retrieve specific columns:
+SELECT emp_name, salary FROM employees;
+10)Filter data using WHERE:
+SELECT * FROM employees WHERE salary > 40000;
+11) Update and Delete:
+UPDATE employees SET salary = 60000 WHERE emp_name = 'John Doe';
+12)Delete data from a table:
+DELETE FROM employees WHERE emp_name = 'John Doe';
+13)Drop Table & Database:
+Delete a table:
+DROP TABLE employees;
+14)delete the database:
+DROP DATABASE my_database;
+15)List all tables in the database:
+\dt;
+16)Describe table structure:
+\d employees
+----------------------------------------------------------------------------------------
+Excercise 1:
+Database & Table Creation:
+Create a new database named school_db and switch to it.
+Create a table named students with the following columns:
+student_id 
+student_name (Varchar, 50)
+age (Integer)
+grade (Varchar, 10)
+marks (Decimal, 5,2)
+Exercise 2:
+1)Insert 5 students into the students
+2)Retrieve Data:
+   *Fetch all students from the students table.
+   * Show only student_name and marks for all students.
+   *Retrieve students whose marks are greater than 80.
+   *Retrieve students who are in Grade 10.
+3) Update Data:
+Increase the marks of students in Grade 9 by 5 points.
+Change the grade of a student named "John" to Grade 11.
+
